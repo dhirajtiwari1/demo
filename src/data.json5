@@ -1,0 +1,74 @@
+{
+	// Put here Application name
+	"name": "Greet",
+
+	// Put here all the meta information for SEO about your's site.
+	"meta": {
+		"default": {
+			"description": "Independence Day Greetings",
+			// "keywords": [],
+			// "author": "webiers",
+			"viewport": {
+				"width": "device-width",
+				"initial-scale": "1.0",
+				"maximum-scale": "1.0",
+				"user-scalable": "no"
+			},
+			// "classification": "Independence Day Greetings",
+			// "copyright": "Powered By ALPA-S",
+			// "distribution": "closed",
+			// "geo.placename": "",
+			// "geo.position": "",
+			// "geo.region": "SG",
+			// "googlebot": "index,follow",
+			// "language": "en",
+			// "robots": "index,follow",
+			// "twitter:card": "",
+			// "twitter:description": "Independence Day Greetings",
+			// "twitter:image": "/assets/images/logos/alpas.png",
+			// "twitter:site": "ALPA-S",
+			// "twitter:title": "ALPA-S",
+			// "theme-color": "#1976d2"
+		},
+		"open_graph": {
+			// "og:audio:secure_url": "",
+			// "og:audio:type": "",
+			// "og:audio": "",
+			// "og:description": "Independence Day Greetings",
+			// "og:determiner": "",
+			// "og:image:alt": "ALPA-S",
+			// "og:image:height": "192",
+			// "og:image:secure_url": "https://app.alpasdb.com/assets/images/logos/alpas.png",
+			// "og:image:type": "image/png",
+			// "og:image:width": "192",
+			// "og:image": "/assets/images/logos/alpas.png",
+			// "og:locale:alternate": "",
+			// "og:locale": "en-US",
+			// "og:site_name": "Greet",
+			// "og:title": "Greet",
+			// "og:type": "website",
+			// "og:price:currency": "SGD"
+			// "og:url": "",
+			// "og:video:height": "",
+			// "og:video:secure_url": "",
+			// "og:video:type": "",
+			// "og:video:width": "",
+			// "og:video": ""
+		},
+		"itemprop": {
+			// "description": "Independence Day Greetings",
+			// "image": "/assets/images/logos/alpas.png",
+			// "name": "Greetings"
+		}
+	},
+
+	// Put here all fonts list for yours site.
+	"fonts": [
+		// "https://fonts.googleapis.com/icon?family=Material+Icons",
+		// "assets/icons/meteocons/style.css",
+		"https://fonts.googleapis.com/css?family=Roboto:300,400,500",
+		// "assets/fonts/material_icon.css",
+		// "assets/icons/icomoon/style.css",
+		// "assets/fonts/roboto.css"
+	]
+}

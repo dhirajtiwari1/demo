@@ -1,0 +1,120 @@
+- var assets ="https://raw.githubusercontent.com/dhirajtiwari1/demo/master/assets/";
+html
+	head
+		meta(content='text/html; charset=UTF-8', http-equiv='Content-Type')
+		meta(content='notranslate', name='google')
+		meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+		meta(charset='utf-8')
+
+		each content, name in meta.default
+			if content instanceof Array
+				- content=content.join(',')
+			else if typeof(content)=='object'
+				- let vals=[]; for(prop in content) vals.push(`${prop}=${content[prop]}`);
+				- content=vals.join(',')
+			meta(name=name, content=content)
+
+		each content, property in meta.open_graph
+			meta(property=property, content=content)
+
+		each content, itemprop in meta.itemprop
+			meta(itemprop=itemprop, content=content)
+
+		meta(content='IE=edge', http-equiv='X-UA-Compatible')
+
+		link(rel='icon', type='image/x-icon', href='favicon.ico')
+		//- link(href=assets+'1c0f6618f877568764787163e8f22a1c', rel='stylesheet', type='text/css')
+		style
+			include:scss(<%- scss %>) ./scss/index.scss
+		//- script(async='', src=assets+'js15_as.js', type='text/javascript')
+	body.back(data-gr-c-s-loaded='true', cz-shortcut-listen='true')
+		//- script(src=assets+'createjs-2015.11.26.min.js')
+		//- script.
+			//- createjs.Sound.registerSound("/15/india1.mp3", "");
+			//- setTimeout(function () {
+			//- createjs.Sound.play("");
+			//- }, 3000)
+
+		//- - let microImages = ["i1.png", "i2.png", "i3.png", "i4.png"];
+		//- marquee.m1(behavior='scroll', direction='up', scrolldelay='5')
+		//- 	br
+		//- 	- let n = 4;
+		//- 	while n-- >0
+		//- 		each image in microImages
+		//- 			img(height='30px', src=assets+image, width='20px')
+		//- 			br
+		//- 			br
+		//- marquee.m2(behavior='scroll', direction='down', scrolldelay='5')
+		//- 	br
+		//- 	- n = 4;
+		//- 	while n-- >0
+		//- 		each image in microImages
+		//- 			img(height='30px', src=assets+image, width='20px')
+		//- 			br
+		//- 			br
+		script.
+			(function(){
+				var assets ="https://raw.githubusercontent.com/dhirajtiwari1/demo/master/assets/";
+				var microImages = ["i1.png", "i2.png", "i3.png", "i4.png"];
+				var img ="<img height='30px' src width='20px'/><br/><br/>";
+				var tags=microImages.map(function(image){
+						return img.replace('src',"src='"+assets+image+"'");
+					}).join('').repeat(4);
+				var result = "<marquee class='m1' behavior='scroll' direction='up' scrolldelay='5'> <br/>" +tags + "</marquee>" +
+				"<marquee class='m2' behavior='scroll' direction='down' scrolldelay='5'><br/>" +tags + "</marquee>" ;
+				document.body.innerHTML=result+document.body.innerHTML;
+			})();
+		#mainContainer.mainContainer.back
+			div(style='text-align: right;font-size: 10px;color:white') @DhiAn
+			h1#username(style='font-family:SF Espresso Shack;')
+			h3#fromMessage.fromMessage
+			img(height='10%', src=assets+'wish.png', style='animation: tada 4s infinite; object-fit: scale-down;  margin-top: 10px;', width='60%')
+			br
+			img(src=assets+'hi1.png', style='animation: tada 4s infinite;width: 80%;height:70px; margin-top: 7px;')
+			img(height='200px', src=assets+'indian.png', style='animation: w3-spin 10s linear infinite;object-fit: scale-down; margin-top: 15px;', width='90%')
+			br
+			br
+			//- <img src="https://raw.githubusercontent.com/dhirajtiwari1/demo/master/index2_files/mb1.png" style="animation: pulse 1.5s infinite;width: 80%;height:100px;">
+			.wishMessage(style='text-shadow: 1px 1px 3px silver, 1px 1px 3px silver, -1px -1px 3px silver, -1px -1px 3px silver;')
+				p(style='text-shadow: 1px 1px 3px black, 1px 1px 3px black, -1px -1px 3px black, -1px -1px 3px black;color:#ff9933') It’s Independence Day
+				p(style='text-shadow: 1px 1px 3px black, 1px 1px 3px black, -1px -1px 3px black, -1px -1px 3px black;color:#ffffff') so say it out loud
+				p(style='text-shadow: 1px 1px 3px silver, 1px 1px 3px silver, -1px -1px 3px silver, -1px -1px 3px silver;color:#138808') For our country we are proud
+				p(style='color:purple')
+					b Happy Independence Day!
+			h1#usernameb(style='margin-top: 30px;')
+			script
+				:uglify-js(<%- uglifyJs %>)
+					function $(x){
+						return document.getElementById(x);
+					}
+					(function(){
+						var brty = location.search.split('n=')[1];
+						if (brty) {
+							var intr = brty.indexOf('\u0026');
+							brty = brty.substring(0, intr >= 0 ? intr : brty.length);
+							$("username").innerHTML =
+							$("usernameb").innerHTML =
+							decodeURI(brty);
+						}
+					})();
+			br
+			#formBox
+				input#nameTextBox(name='n', placeholder='👉 Enter your name here...', required='', type='text')
+				br
+				br
+				script(type='text/javascript').
+					function sWA() {
+					var username = $("nameTextBox").value;
+					var msg = "This is special gift for you all my special";
+					var link = 'http://dhirajti.blogspot.com/';
+					window.open('whatsapp://send?text=' + msg + " \\n" + link + '?n=' + encodeURI(username), "_blank");
+					}
+				button#goButton(onclick='sWA()') 😍 Share on WhatsApp 😍
+			//- script(src=assets+'jquery-2.2.4.min.js')
+			//- script(src=assets+'2018.js')
+			style.
+				input::placeholder {
+					color: black;
+					text-align: center;
+				}
+			//- script(async='', src=assets+'js')
